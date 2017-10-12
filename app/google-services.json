@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "147621581475",
+    "firebase_url": "https://zywee-app.firebaseio.com",
+    "project_id": "zywee-app",
+    "storage_bucket": "zywee-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147621581475:android:92c818bac406fe29",
+        "android_client_info": {
+          "package_name": "com.infovita.zywee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147621581475-1quejahp50n6v9msg8pmh663g3ptfht2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAER6F2_CbuQq6cUqzfN2avBHNPl1J_KgU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
