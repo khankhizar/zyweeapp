@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginActivity"
+    android:background="#00AFEF">
+
+
+
+        <LinearLayout
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/b1"
+            android:orientation="vertical"
+            android:weightSum="9">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/message_login_short"
+                android:textColor="@color/g5"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/g5" />
+
+            <RelativeLayout
+                android:id="@+id/mobile_window"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/login_email"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="@string/message_login"
+                    android:textColor="@color/g5" />
+
+                <EditText
+                    android:id="@+id/login_email"
+                    android:layout_above="@+id/login_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@color/g5"
+                    android:gravity="center"
+                    android:hint="@string/prompt_email"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="textVisiblePassword"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    />
+
+                <EditText
+                    android:id="@+id/login_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@color/g5"
+                    android:gravity="center"
+                    android:hint="@string/prompt_phone"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login_phone"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:text="@string/message_login_alert"
+                    android:textColor="@color/g5" />
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/login_submit_button"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/b2"
+                android:text="@string/action_sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/g5" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+

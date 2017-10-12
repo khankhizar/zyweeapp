@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cart_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <RelativeLayout
+                android:id="@+id/non_prescription_product_cart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_background">
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/prescription_product_cart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/non_prescription_product_cart_layout"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layout_background">
+
+                <RelativeLayout
+                    android:id="@+id/prescription_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/b1">
+
+                    <ImageView
+                        android:id="@+id/prescription_title_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="3dp"
+                        android:padding="5dp"
+                        android:src="@drawable/nonprescriptionitems" />
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/prescription_title_icon"
+                        android:padding="5dp"
+                        android:text="@string/prompt_prescriptions"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/prescription_product__list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/prescription_title"
+                    android:padding="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/prescription_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/prescription_title"
+                    android:padding="10dp"
+                    android:orientation="vertical"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manual_cart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/prescription_product_cart_layout"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/layout_background">
+
+                <RelativeLayout
+                    android:id="@+id/manual_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/b1">
+
+                    <ImageView
+                        android:id="@+id/manual_title_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="3dp"
+                        android:padding="5dp"
+                        android:src="@drawable/addmanually" />
+
+                    <TextView
+                        android:id="@+id/manual_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/manual_title_icon"
+                        android:padding="5dp"
+                        android:text="@string/prompt_manual_entry"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/manual_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/manual_title"
+                    android:padding="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/medicine_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/manual_title"
+                    android:padding="10dp"
+                    android:orientation="vertical"/>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/street_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/manual_cart_layout"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/notes_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:digits="qwertyuiopasdfghjklmnbvcxzQWERTYUIOPLKJHGFDSAZXCVBNM '@.#,-\/0123456789"
+                    android:hint="@string/action_enter_notes"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/g1"
+                    android:textColorHint="@color/g2"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/prescription_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/b1"
+        android:orientation="horizontal">
+
+       <!-- <Button
+            android:id="@+id/add_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@null"
+            android:text="@string/action_add_more"
+            android:textAllCaps="false"
+            android:textColor="@color/g4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:text="|"
+            android:textColor="@color/g4"
+            android:textSize="25sp" />-->
+
+        <Button
+            android:id="@+id/review"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@null"
+            android:text="@string/action_checkout"
+            android:textAllCaps="false"
+            android:textColor="@color/g4" />
+    </LinearLayout>
+
+</RelativeLayout>

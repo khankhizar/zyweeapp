@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:titleEnabled="false"
+    android:background="@color/g4">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleEnabled="false">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+             <RelativeLayout
+               android:id="@+id/descr"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="1">
+
+           <ImageView
+               android:id="@+id/item_image"
+               android:layout_width="match_parent"
+               android:layout_height="150dp"
+               android:padding="0dp"
+               android:src="@drawable/zywee_logo"
+               android:visibility="visible"
+               android:scaleType="fitXY"/>
+                 </RelativeLayout>
+
+          <!-- <RelativeLayout
+               android:id="@+id/descr"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="1">
+
+               <ImageView
+                   android:id="@+id/item_image"
+                   android:layout_width="match_parent"
+                   android:layout_height="150dp"
+                   android:padding="0dp"
+                   android:src="@drawable/zywee_logo"
+                   android:visibility="visible"
+                   android:scaleType="fitXY"/>
+
+               &lt;!&ndash;   <View
+                      android:id="@+id/v2"
+                      android:layout_width="match_parent"
+                      android:layout_height="1px"
+                      android:layout_below="@+id/item_image"
+                      android:background="@color/g1" />
+      &ndash;&gt;
+               <TextView
+                   android:id="@+id/head"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/item_image"
+                   android:padding="15dp"
+                   android:text="Description"
+                   android:visibility="gone"
+                   android:textColor="@color/b1"
+                   android:textSize="15sp"
+                   android:layout_margin="@dimen/activity_horizontal_margin"
+                   />
+               <TextView
+                   android:id="@+id/description"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="left"
+                   android:minLines="2"
+                   android:layout_below="@+id/head"
+                   android:padding="10dp"
+                   android:textSize="15sp"
+                   android:text="Description"
+                   android:layout_margin="@dimen/activity_horizontal_margin"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   />
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="5dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginRight="10dp"
+                   android:id="@+id/dotted"
+                   android:background="@drawable/dotted"
+                   android:layout_below="@+id/description"
+                   android:layerType="software"/>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Show more"
+                   android:id="@+id/showmore_desc"
+                   android:layout_below="@+id/dotted"
+                   android:textColor="@color/g2"
+                   android:padding="5dp"
+                   android:gravity="center"
+                  />
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/showmore_desc"
+                   android:orientation="vertical"
+                   android:id="@+id/package_desc_hide"
+                   android:visibility="gone"
+                   android:layout_margin="@dimen/activity_horizontal_margin">
+               <TextView
+                   android:id="@+id/heading"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="15dp"
+                   android:textSize="15sp"
+                   android:layout_below="@+id/description"
+                   android:text="Why Do You Need To Undergo This Package?"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:textColor="@color/b1" />
+
+               <TextView
+                   android:id="@+id/desc"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="left"
+                   android:minLines="2"
+                   android:layout_below="@+id/heading"
+                   android:padding="10dp"
+                   android:textSize="15sp"
+                   android:text="Description"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   />
+               <TextView
+                   android:id="@+id/heading1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="15dp"
+                   android:textSize="15sp"
+                   android:layout_below="@+id/desc"
+                   android:text="Why Do You Need To Undergo This Package?"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:textColor="@color/b1" />
+
+               <TextView
+                   android:id="@+id/desc1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="left"
+                   android:minLines="2"
+                   android:layout_below="@+id/heading1"
+                   android:padding="10dp"
+                   android:textSize="15sp"
+                   android:text="Description"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   />
+               <TextView
+                   android:id="@+id/heading3"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="15dp"
+                   android:textSize="15sp"
+                   android:layout_below="@+id/desc1"
+                   android:text="Why Do You Need To Undergo This Package?"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:textColor="@color/b1" />
+
+               <TextView
+                   android:id="@+id/desc2"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="left"
+                   android:minLines="2"
+                   android:layout_below="@+id/heading3"
+                   android:padding="10dp"
+                   android:textSize="15sp"
+                   android:text="Descriotion"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   />
+
+   </LinearLayout>
+           </RelativeLayout>-->
+            <LinearLayout
+                android:id="@+id/provider_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descr"
+                android:orientation="vertical"
+                android:paddingBottom="40dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"/>
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

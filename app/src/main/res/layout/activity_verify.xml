@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginActivity"
+    android:background="#00AFEF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout2"
+        android:weightSum="9">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Login"
+            android:textColor="#FFFFFFFF"
+            android:id="@+id/logintextView"
+            android:gravity="center" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFFFF"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_weight="8">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/verification_code"
+            android:gravity="center"
+            android:textColor="#FFFFFFFF"
+            android:padding="10dp"
+            android:text="Enter verification code"
+            />
+
+        <EditText
+            android:id="@+id/verification_code"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@color/g5"
+            android:gravity="center"
+            android:hint="Enter 6 Digits verification code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+
+      </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/b2"
+        >
+        <Button
+            android:id="@+id/retry_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@color/b2"
+            android:text="Retry"
+            android:textAllCaps="false"
+            android:textColor="@color/g5" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="|"/>
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@color/b2"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/g5" />
+
+    </LinearLayout>
+
+</RelativeLayout>

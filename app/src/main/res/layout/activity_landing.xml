@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:elevation="4dp"
+                local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="?attr/actionBarSize"
+                    android:src="@drawable/zywee_app_logo" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                     />
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1"
+                tools:context="com.infovita.zywee.LandingActivity">
+
+                <GridView
+                    android:id="@+id/gridView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="0.78"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="2"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:verticalSpacing="10dp"
+                    android:visibility="visible"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/feat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignParentTop="false"
+                    android:layout_below="@+id/gridView1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="0.30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/b3"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="8dp"
+                        android:text="Featured Services"
+                        android:textColor="#FFFFFF" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include
+                                android:id="@+id/mri"
+                                layout="@layout/basic_list_design" />
+
+
+                            <include
+                                android:id="@+id/blood_test"
+                                layout="@layout/basic_list_design" />
+
+                            <include
+                                android:id="@+id/ct_scan"
+                                layout="@layout/basic_list_design" />
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <include android:id="@+id/header" layout="@layout/drawer_header" />
+
+            <ExpandableListView
+                android:id="@+id/left_drawer"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:choiceMode="singleChoice"
+                android:divider="@color/g2"
+                android:dividerHeight="1px"
+                android:groupIndicator="@android:color/transparent" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

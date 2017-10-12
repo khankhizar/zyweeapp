@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:titleEnabled="false">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleEnabled="false">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/g5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp">
+
+            <RelativeLayout
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_appointment_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:text="@string/prompt_appointment_type"
+                        android:textColor="@color/g2" />
+
+                    <TextView
+                        android:id="@+id/appointment_type"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_below="@+id/type"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/equipment_type"
+                        android:textColor="@color/g1" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_provider_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/layout_appointment_type">
+
+                    <TextView
+                        android:id="@+id/provider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="@string/prompt_provider"
+                        android:textColor="@color/g2" />
+
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/provider_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_below="@+id/provider"
+                        android:padding="5dp"
+                        android:textColor="@color/g1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/booking_detail"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/g2"
+                    android:padding="10dp"
+                    android:textColor="@android:color/background_light"
+                    android:text="@string/prompt_booking_detail"
+                    android:layout_below="@+id/layout_provider_name"/>
+
+
+                <include
+                    android:id="@+id/cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/booking_detail"
+                    layout="@layout/equipment_cart_data"/>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_cost"
+                    android:layout_below="@+id/cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/g4"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Total Cost"
+                        android:textColor="@color/g1"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="0.73"
+                        android:gravity="center"
+                        android:text="Total price"
+                        android:textColor="@color/b1"
+                        android:textSize="15dp" />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_cost">
+
+                    <TextView
+                        android:id="@+id/delivery_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:text="@string/prompt_equipment_delivery"
+                        android:textColor="@color/g2" />
+
+                    <CheckBox
+                        android:id="@+id/delivery_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/delivery_title"
+                        android:text="@string/action_delivery_required"
+                        android:textColor="@color/g1" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/coup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/layout_delivery"
+                    >
+
+                    <EditText
+                        android:id="@+id/coupon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="0.73"
+                        android:gravity="center"
+                        android:textColor="@color/b1"
+                        android:hint="Coupon code"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/apply"
+                        android:visibility="visible"
+                        android:layout_width="0dp"
+                        android:background="@color/g1"
+                        android:textColor="@android:color/white"
+                        android:layout_height="wrap_content"
+                        android:text="Apply"
+                        android:textSize="15sp"
+                        android:textAllCaps="false"
+                        android:layout_margin="15dp"
+                        android:layout_weight="0.5"  />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/coup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="0.73"
+                        android:gravity="center"
+                        android:textColor="@color/b1"
+                        android:text="Coupon Code applied Sucsessfully!"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/background_light">
+
+            <Button
+                android:id="@+id/cancel_action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1px"
+                android:layout_weight="0.5"
+                android:text="@string/action_cancel"
+                android:background="@color/g1"
+                android:textColor="@android:color/background_light"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1px"
+                android:layout_weight="0.5"
+                android:text="@string/action_submit"
+                android:background="@color/y2"
+                android:textColor="@android:color/background_light"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

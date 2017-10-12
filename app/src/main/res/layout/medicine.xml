@@ -1,0 +1,89 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/medicineCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/b3"
+            android:textSize="14sp"
+            android:text="aaa"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:id="@+id/remove_medicine_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:src="@drawable/ic_close"
+            android:background="@null"
+            />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/add_description_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/add_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="prompt_add_description"
+            android:inputType="text"
+            android:textColor="@color/g1"
+            android:textColorHint="@color/g1"
+            android:textSize="12sp"
+            android:digits="qwertyuiopasdfghjklmnbvcxzQWERTYUIOPLKJHGFDSAZXCVBNM @'-._0123456789"/>
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/specify_quantity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/g1">
+
+        <EditText
+            android:id="@+id/specify_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="prompt_specify_quantity"
+            android:inputType="text"
+            android:textColor="@color/g1"
+            android:textColorHint="@color/g1"
+            android:textSize="12sp"
+            android:digits="qwertyuiopasdfghjklmnbvcxzQWERTYUIOPLKJHGFDSAZXCVBNM -0123456789"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/addNotes_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/addNotesManual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="prompt_add_notes"
+            android:inputType="textLongMessage"
+            android:textColor="@color/g1"
+            android:textColorHint="@color/g1"
+            android:textSize="12sp"
+            android:digits="qwertyuiopasdfghjklmnbvcxzQWERTYUIOPLKJHGFDSAZXCVBNM !@#*()-_+0123456789"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

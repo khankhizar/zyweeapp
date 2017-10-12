@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="1dp"
+    card_view:contentPadding="5dp"
+    card_view:cardUseCompatPadding="false">-->
+
+   <!-- <RelativeLayout
+        android:id="@+id/lay6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/provider_name"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
+            android:layout_margin="3dp"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/b2"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="150sp"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:text="Central Diagnostic and Research Foundation (Anjana Diagnostic)"/>
+        <RatingBar
+            android:layout_margin="5dp"
+            android:id="@+id/ratingBar"
+            android:layout_toLeftOf="@+id/arrow"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:max="5"
+            android:stepSize="1"
+            android:progressBackgroundTint="@color/g3"
+            android:progressTint="@color/colorAccent"
+            android:rating="0.0"
+            android:theme="@style/RatingBar"/>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:paddingTop="3dp"
+            android:src="@drawable/arrow_yellow_64"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/list_locality_name"
+            android:text="Indiranagar"
+            android:textColor="@color/g2"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/provider_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dotted"
+            android:layerType="software"
+            android:layout_below="@+id/list_locality_name"/>
+
+      &lt;!&ndash;  <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/v1"
+            android:layout_marginLeft="5dp"
+            android:text="0.5km"
+            android:textColor="@color/g2"
+            android:visibility="gone"/>
+
+
+
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/provider_price"
+            android:layout_below="@+id/v1"
+            android:textColor="@color/b2"
+            android:textSize="16sp"
+            android:text="Rs 4200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"/>&ndash;&gt;
+        <LinearLayout
+            android:id="@+id/li"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/v1"
+
+            android:weightSum="1">
+            &lt;!&ndash; android:layout_alignParentLeft="true">&ndash;&gt;
+
+            <TextView
+                android:id="@+id/distance"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="0.5 km"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/g2" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="25sp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/g2"
+                android:id="@+id/showmore_package"
+                android:text="Show Details"
+                android:textAllCaps="false"
+                android:background="@drawable/button_background_black"
+                android:layout_below="@+id/v1"
+                android:layout_alignLeft="@+id/view_price_bottom"
+                android:layout_alignStart="@+id/view_price_bottom"/>
+&lt;!&ndash;
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:paddingLeft="5dp"
+                android:layout_toLeftOf="@+id/test_cost_full"
+                android:layout_gravity="center"
+                android:progressBackgroundTint="@color/g3"
+                android:progressTint="@color/colorAccent"
+                android:rating="3.5" />
+&ndash;&gt;
+
+
+            <TextView
+                android:id="@+id/test_cost_full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_toLeftOf="@+id/test_cost"
+                android:text=""
+                android:textColor="@color/g2"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/test_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="rs 4200"
+                android:textColor="@color/b3"
+                android:textIsSelectable="false"
+                android:textSize="20dp"
+                android:paddingRight="20dp"/>
+
+            <TextView
+                android:id="@+id/list_item_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_background"
+                android:gravity="center_horizontal"
+                android:text="0% off"
+                android:textColor="@color/g2"
+                android:textSize="12dp"
+                android:visibility="visible"/>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:id="@+id/view_price_bottom"
+            android:layout_height="0px"
+            android:layout_marginTop="5dp"
+            android:background="@color/g3"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_below="@+id/li"/>
+      &lt;!&ndash;  <TextView
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/test_cost_full"
+            android:textColor="@color/g2"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/provider_price"
+            android:layout_below="@+id/v1"
+            android:textSize="16sp"
+            android:text="Rs 5000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />&ndash;&gt;
+       &lt;!&ndash; <Button
+            android:layout_width="wrap_content"
+            android:layout_height="25sp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/g2"
+            android:id="@+id/showmore_package"
+            android:text="Show Details"
+            android:textAllCaps="false"
+            android:background="@drawable/button_background_black"
+            android:layout_below="@+id/v1"
+            android:layout_alignLeft="@+id/view_price_bottom"
+            android:layout_alignStart="@+id/view_price_bottom" />&ndash;&gt;
+
+
+            <LinearLayout
+                android:id="@+id/expand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_price_bottom"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/packageName_title"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="0dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The package includes " />
+                <TextView
+                    android:id="@+id/content"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="0dp"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Contents" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay"
+            android:layout_below="@+id/expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:visibility="visible">
+            <Button
+                android:id="@+id/call_us"
+                android:layout_width="0dp"
+                android:background="@color/g1"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:text="Call Us"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:layout_marginRight="3px"
+                android:layout_weight="0.5"/>
+            <Button
+                android:id="@+id/provider_book_button"
+                android:layout_marginLeft="3px"
+                android:textAllCaps="false"
+                android:layout_width="0dp"
+                android:background="@color/y2"
+                android:text="Book Appointment"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+    </RelativeLayout>-->
+
+
+<!--</android.support.v7.widget.CardView>
+-->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="1dp"
+    card_view:contentPadding="5dp"
+    card_view:cardUseCompatPadding="false">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/lay7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="left"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/provider_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="4dp"
+                android:text="Institute Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/b2"
+                android:textSize="16sp"
+                />
+
+            <Button
+                android:id="@+id/Show"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:background = "@drawable/if_icon_ios7_plus_outline_211802"
+                android:layout_marginRight="3dp"
+                 />
+
+            <TextView
+                android:id="@+id/list_locality_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/provider_name"
+                android:singleLine="true"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/g2"
+                android:textSize="12dp" />
+
+            <!--<ImageView-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_width="32dp"-->
+                <!--android:layout_height="32dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:src="@drawable/arrow_yellow_64"-->
+                <!--/>-->
+
+
+        </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/treat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:textSize="15sp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:textSize="12sp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/g2" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <!-- android:layout_alignParentLeft="true">-->
+
+       <!-- <TextView
+            android:id="@+id/provider_name"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:textSize="12sp"
+            android:maxWidth="120sp"
+            android:text="Central Diagnostic and Research Foundation (Anjana Diagnostic)"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/g2" />
+
+        <TextView
+            android:id="@+id/list_locality_name"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text=""
+            android:textSize="12sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/g2" />
+-->
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="12sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/g2"
+            android:visibility="gone"
+            />
+
+        <RatingBar
+            android:layout_marginRight="2dp"
+            android:id="@+id/ratingBar"
+            android:layout_toLeftOf="@+id/test_cost_full"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:max="5"
+            android:stepSize="1"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/list_locality_name"
+            android:progressBackgroundTint="@color/g3"
+            android:progressTint="@color/colorAccent"
+            android:rating="5"
+            android:theme="@style/RatingBar"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            />
+
+
+        <TextView
+            android:id="@+id/test_cost_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_toLeftOf="@+id/test_cost"
+            android:text=""
+            android:textColor="@color/g2"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/test_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/b3"
+            android:textIsSelectable="false"
+            android:textSize="15sp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="2dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/list_item_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background"
+            android:gravity="center_horizontal"
+            android:text="0% off"
+            android:textColor="@color/g2"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/provider_book_button"
+            android:layout_marginLeft="3px"
+            android:textAllCaps="false"
+            android:layout_width="0dp"
+            android:background="@color/y2"
+            android:text="Book"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

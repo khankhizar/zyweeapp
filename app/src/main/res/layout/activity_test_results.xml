@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".Activities.TestResultsActivity">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/li"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="Location"
+                    android:visibility="gone"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/g1"/>
+
+                   <!-- <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:background="@drawable/gradient_spinner"
+                        />-->
+                <LinearLayout
+                    android:id="@+id/parent_list_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:background="@drawable/gradient_spinner"
+                        />
+
+                    <TextView
+                        android:id="@+id/empty"
+                        android:text="No Data Found"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        />
+
+                    <ListView
+                        android:id="@+id/test_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"
+                        android:layout_weight="1"/>
+
+
+                    <!-- <TextView
+                            android:id="@+id/enq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No more results found"
+                            android:layout_gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/g1"
+                            android:visibility="gone"/>-->
+
+                </LinearLayout>
+
+
+
+                   <!-- <TextView
+                        android:id="@+id/no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="No more results found"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/g1"
+                        />
+-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/button_continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/test_book_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FBA204"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Continue Booking"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+</LinearLayout>
+  <!--  <android.support.design.widget.FloatingActionButton
+        android:layout_margin="10dp"
+        android:id="@+id/myFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#FF0000"
+        app:borderWidth="0dp"
+        app:elevation="8dp"
+        app:layout_anchor="@id/test_list"
+        app:layout_anchorGravity="bottom|right|end" />-->
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">Zywee</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rupee">\u20A8</string>
+    <string name="title_activity_testdetails">Test Detail</string>
+    <!-- Strings related to login -->
+    <string name="prompt_phone">Enter 10 digit mobile number</string>
+    <string name="prompt_email">Enter Email id</string>
+    <string name="action_sign_in">Submit</string>
+    <string name="error_invalid_phone">This phone number is invalid</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="message_login_short">Login</string>
+    <string name="message_login">Login with your mobile number</string>
+    <string name="message_login_alert">You will receive a verification code after submitting the mobile number</string>
+    <string name="prompt_verification_code">Enter Verification Code</string>
+    <string name="prompt_otp">Enter 5 digit verification code</string>
+    <string name="error_invalid_otp">Please enter correct OTP</string>
+    <string name="action_resend_otp">Resend OTP</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="profile">Profile</string>
+    <string name="prompt_upload_prescription">Upload Prescription</string>
+    <string name="prompt_take_photo">Take photo of Prescription</string>
+    <string name="prompt_browse_photo">Browse Prescriptions</string>
+    <string name="prompt_prescriptions">Prescriptions</string>
+    <string name="prompt_prescription">Prescription</string>
+    <string name="action_add_more">Specify Medicine Name</string>
+    <string name="prompt_order_button">Review Order</string>
+    <string name="prompt_contact_person">Contact Person</string>
+    <string name="prompt_phone_hint">Phone Number</string>
+    <string name="prompt_house_number">House Number</string>
+    <string name="prompt_street_address">Street Address</string>
+    <string name="action_get_address">Get Address</string>
+
+    <!--Strings related to manual entry -->
+    <string name="prompt_manual_long">If this is a rare medical item to find, we can help you to find it in the right store</string>
+    <string name="action_enter">Enter Another Item</string>
+    <string name="action_add_items">Add Items</string>
+    <string name="prompt_add_description">Add Description</string>
+    <string name="prompt_specify_quantity">Specify Quantity</string>
+    <string name="prompt_add_notes">Add Notes</string>
+    <string name="prompt_add_manual_items">Manually Enter Items</string>
+    <string name="action_checkout">Checkout</string>
+    <string name="action_enter_notes">Enter Notes</string>
+    <string name="prompt_manual_entry">Manual Medicine</string>
+    <string name="action_modify">Modify</string>
+    <string name="action_remove">Remove</string>
+    <string name="prompt_delivery_date">Delivery Date</string>
+    <string name="prompt_start_time">Start Time</string>
+
+    <!--Strings relatedd to  Select store-->
+    <string name="action_select_store">Select Store</string>
+    <string name="action_help_me_with_best_store">Help me with the best Store</string>
+    <string name="action_i_will_choose_the_store">I will choose the store</string>
+    <string name="action_allopathy_store">Allopathy Store</string>
+    <string name="action_ayurveda_store">Ayurveda Store</string>
+    <string name="action_homeopathy_store">Homeopathy Store</string>
+    <string name="action_select_date_time">Select Delivery Date and Time</string>
+
+    <string name="prompt_no_prescriptions">It appears your cart is empty!</string>
+    <string name="action_add_prescription"><u>Click here</u> to add medicine prescription</string>
+
+
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Hospitals</item>
+        <item>Doctors</item>
+        <item>Health Packages</item>
+        <item>Medical Test</item>
+    </string-array>
+
+
+    <string-array name="prescription_drawable_array">
+        <item>@drawable/takephoto</item>
+        <item>@drawable/browsephoto</item>
+       <!-- <item>@drawable/addmanually</item>-->
+    </string-array>
+
+    <string-array name="prescription_text_array">
+        <item>@string/prompt_take_photo</item>
+        <item>@string/prompt_browse_photo</item>
+       <!-- <item>@string/prompt_add_manual_items</item>-->
+
+    </string-array>
+
+
+    <!--Personal details-->
+    <string name="prompt_personal_detail">Personal Detail</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_mail">Email</string>
+    <string name="prompt_mobile">Mobile Number</string>
+    <string name="prompt_address">Address</string>
+    <string name="prompt_verification">Verification Code</string>
+    <string name="action_continue">Continue</string>
+
+
+    <string name="prompt_appointment_time">Appointment Time</string>
+    <string name="prompt_cart">Cart</string>
+    <string name="action_submit">Submit</string>
+
+
+    <!--Equipment String-->
+    <string name="prompt_appointment_type">Appointment Type</string>
+    <string name="equipment_type">Equipment Booking</string>
+    <string name="prompt_provider">Provider</string>
+    <string name="prompt_booking_detail">Booking Details</string>
+    <string name="action_delivery_required">Delivery Required</string>
+    <string name="prompt_equipment_delivery">Equipment Delivery :</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="prompt_delivery_address">Delivery Address</string>
+    <string name="ambulance_type">Ambulance Booking</string>
+    <string name="start">Starting Point</string>
+    <string name="destination">Destination</string>
+
+    <string name="home_service_type">Home Services</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="facebook_app_id">1412648118751613</string>
+
+    <string name="prompt_customer_name">Customer Name :</string>
+    <string name="prompt_customer_number">Customer Number :</string>
+    <string name="prompt_order_id">Order ID :</string>
+    <string name="prompt_ordered_for">Ordered for</string>
+    <string name="prompt_notes">Notes :</string>
+    <string name="prompt_price">Price :</string>
+    <string name="prompt_status">Status :</string>
+
+
+</resources>

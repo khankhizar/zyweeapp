@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:id="@+id/view">
+    <LinearLayout
+        android:layout_width="0sp"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:padding="16sp">
+        <TextView
+
+            android:id="@+id/report_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Appointment Title"
+            android:textColor="@color/colorPrimary"
+            android:maxLines="1"
+            android:textSize="20sp"/>
+        <TextView
+
+            android:id="@+id/report_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Appointment Title"
+            android:textSize="12sp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:padding="16sp">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_gravity="right"
+                android:id="@+id/report_download"
+                android:src="@drawable/arrow_yellow_64"/>
+    </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

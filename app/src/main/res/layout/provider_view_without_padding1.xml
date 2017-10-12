@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="1dp"
+    card_view:contentPadding="5dp"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/b2"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/arrow"
+            android:layout_alignParentLeft="true"
+            android:text="Central Diagnostic and Research Foundation (Anjana Diagnostic)"/>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow_yellow_64"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/locality"
+            android:text="Indiranagar"
+            android:textColor="@color/g2"
+            android:layout_below="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_height="1dp"
+            android:background="@color/g3"
+            android:layout_below="@+id/locality"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/distance1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/v1"
+            android:text="0.5km"
+            android:textColor="@color/g2"/>
+
+        <RatingBar
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/ratingBar1"
+            android:layout_toRightOf="@+id/distance1"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v1"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:max="5"
+            android:layout_margin="5dp"
+            android:stepSize="1"
+            android:layout_centerVertical="true"
+            android:progressBackgroundTint="@color/g3"
+            android:progressTint="@color/colorAccent"
+            android:rating="0.0"
+            android:theme="@style/RatingBar" />
+
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/discount_price1"
+            android:layout_below="@+id/v1"
+            android:textColor="@color/b2"
+            android:textSize="16sp"
+            android:text="Rs 4200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/original_price1"
+            android:textColor="@color/g2"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/discount_price1"
+            android:layout_below="@+id/v1"
+            android:textSize="16sp"
+            android:text="Rs 5000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_below="@+id/ratingBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+            <Button
+                android:id="@+id/call_us1"
+                android:layout_width="0dp"
+                android:background="@color/g1"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:text="Call Us"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:layout_marginRight="3px"
+                android:layout_weight="0.5"/>
+            <Button
+                android:id="@+id/book1"
+                android:layout_marginLeft="3px"
+                android:textAllCaps="false"
+                android:layout_width="0dp"
+                android:background="@color/y2"
+                android:text="Book"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

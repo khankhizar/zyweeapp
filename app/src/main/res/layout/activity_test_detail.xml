@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:titleEnabled="false"
+    android:background="@color/g4">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleEnabled="false">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_horizontal_margin">
+
+           <!-- <RelativeLayout
+                android:id="@+id/descr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/item_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:padding="5dp"
+                    android:src="@drawable/zywee_logo"
+                    android:visibility="gone"/>
+
+                &lt;!&ndash;   <View
+                       android:id="@+id/v2"
+                       android:layout_width="match_parent"
+                       android:layout_height="1px"
+                       android:layout_below="@+id/item_image"
+                       android:background="@color/g1" />
+       &ndash;&gt;
+
+                <LinearLayout
+                    android:id="@+id/des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/des1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+                <TextView
+                    android:id="@+id/head"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_image"
+                    android:padding="15dp"
+                    android:text="Description"
+                    android:textColor="@color/b1"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:minLines="2"
+                    android:layout_below="@+id/head"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    />
+
+               &lt;!&ndash; <Button
+                    android:id="@+id/viewmore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View More"
+                    android:layout_below="@+id/des"/>&ndash;&gt;
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/v2"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/dotted"
+                        android:layerType="software" />
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/g2"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:id="@+id/viewmore"
+                        android:text="View More"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/v2"
+
+                        />
+
+                <LinearLayout
+                    android:id="@+id/lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v3"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/description"
+                    android:text="How is test done"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/b1" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:minLines="2"
+                    android:layout_below="@+id/heading"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:text="Descriotion"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    />
+                <TextView
+                    android:id="@+id/heading1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/desc"
+                    android:text="When to take test"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/b1" />
+
+                <TextView
+                    android:id="@+id/desc1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:minLines="2"
+                    android:layout_below="@+id/heading1"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:text="Descriotion"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    />
+                <TextView
+                    android:id="@+id/heading3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/desc1"
+                    android:text="Test Result Mean"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/b1" />
+
+                <TextView
+                    android:id="@+id/desc2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:minLines="2"
+                    android:layout_below="@+id/heading3"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:text="Descriotion"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    />
+                </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>-->
+            <LinearLayout
+                android:id="@+id/provider_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descr"
+                android:orientation="vertical"
+                android:paddingBottom="40dp" />
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

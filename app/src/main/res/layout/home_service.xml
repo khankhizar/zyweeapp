@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:background="@color/b3"
+                android:text="Equipment name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff" />
+</RelativeLayout>
+        <!--   <View
+               android:layout_width="wrap_content"
+               android:layout_height="1dp"
+               android:layout_below="@+id/topics_text"
+               android:layout_margin="5dp"
+               android:layout_marginTop="0dp"
+               android:background="@color/g2" />
+   -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:weightSum="5">
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_toRightOf="@id/imageView2"-->
+            <!--android:src="@drawable/divider"-->
+            <!--android:layout_centerVertical="true"/>-->
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/zywee_logo"
+                android:visibility="visible"
+                android:scaleType="fitXY"
+                />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/p1_n"
+            layout="@layout/provider_view_without_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/g4"
+            android:layout_below="@id/p1_n"/>
+        <include
+            android:id="@+id/p2_n"
+            layout="@layout/provider_view_without_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v1" />
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/g4"
+            android:layout_below="@id/p2_n"/>
+
+        <TextView
+            android:id="@+id/desc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:minLines="2"
+            android:layout_below="@+id/v2"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:text="No Result Found"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="right"/>
+
+        <Button
+            android:id="@+id/more_details"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@color/y2"
+            android:layout_below="@+id/v2"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/blue_fwd_arrow_thin"
+            android:text="View More"
+            android:layout_gravity="right"/>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

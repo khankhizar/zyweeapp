@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/equipments"
+        android:padding="4dp"/>
+       <!-- android:background="@drawable/background_circle" -->
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Tests"
+            android:textSize="16sp"
+            android:textColor="@color/b1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:textColor="@color/g2"
+            android:text="Get Up to 15% off"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/arrow_yellow_64" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/g2"/>
+</RelativeLayout>

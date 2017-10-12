@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+ <!--   <TextView
+        android:id="@+id/loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="left"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="Location"
+        android:layout_below="@+id/toolbar"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/g1"/>
+-->
+    <ListView
+        android:id="@+id/test_list"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+
+       />
+    <TextView
+        android:id="@+id/empty"
+        android:text="No Data Found"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/test_book_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/y2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Continue Booking"
+        android:layout_alignParentBottom="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</RelativeLayout>
